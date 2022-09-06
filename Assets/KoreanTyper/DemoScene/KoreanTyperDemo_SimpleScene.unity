@@ -191,7 +191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD55C\uAD6D\uC5B4 \uC785\uB825\uC744 \uC9C0\uC6D0\uD569\uB2C8\uB2E4."
+  m_Text: "UI \uD3F0\uD2B8 \uD14C\uC2A4\uD2B8"
 --- !u!222 &152622498
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -211,10 +211,10 @@ RectTransform:
   m_Father: {fileID: 596407203}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 9600, y: 900}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &531756837
 GameObject:
