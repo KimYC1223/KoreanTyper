@@ -154,8 +154,8 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\uD55C\uAE00\uC744 \uD0C0\uC790\uAE30\uCC98\uB7FC \uC785\uB825|"
 --- !u!222 &152622498
@@ -180,7 +180,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -73}
-  m_SizeDelta: {x: 1523, y: 171}
+  m_SizeDelta: {x: 1584, y: 171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &531756837
 GameObject:
