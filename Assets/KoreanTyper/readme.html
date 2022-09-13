@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoreanTyper Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            padding:0;
+            margin:0;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+        }
+
+        strong {font-weight: 500;}
+
+        .wrapperDiv {
+            width: 100%;
+            height: 6000px;
+            position: absolute;
+        }
+
+        .markdown-body {
+            position: absolute;
+            width: 800px;
+            transform: translate(-50%,-50%);
+            top:50%;
+            left:50%;
+            padding: 50px;
+            border-radius: 10px;
+            background-color: white;
+            font-size: 16px;
+            height: 5800px;
+        }
+
+        .titleImage {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        hr {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            line-height: 40px;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid #22272e;
+            padding: 10px 20px;
+            margin: 10px 0px;
+        }
+
+        table tr {
+            height: 40px;
+        }
+
+        h1 { color:rgb(10, 46, 46);  font-size: 50px; line-height: 50px; margin-bottom: 20px;}
+        h2 { color:rgb(10, 46, 46); font-size: 30px; line-height: 40px;margin-bottom: 20px;}
+        h3 { color:rgb(10, 46, 46); font-size: 24px; line-height: 30px;margin-bottom: 20px;}
+
+        li {margin-left: 50px; line-height: 30px;}
+
+        pre {
+            width: calc(100% - 40px);
+            background-color: #e5e5e5;
+            padding:20px;
+            line-height: 24px;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        code {
+            background-color: #e5e5e5;
+            padding:2px 5px;
+            border-radius: 3px;
+            color:#0f1a2a;
+            font-weight: 400;
+        }
+
+        </style>
+
+    <meta name="msapplication-TileColor" content="#22272e">
+    <meta name="theme-color" content="#22272e">
+</head>
+
+<body bgcolor="#22272e">
+    <div class="wrapperDiv">
+        <div class="markdown-body">
+            <p><img class="titleImage" src="https://github.com/KimYC1223/KoreanTyper/blob/main/DocImage/Title.png?raw=true" alt="logo Image">
+            </p>
+            <h1>Korean Typer</h1>
+            <p>C# string class 키보드 한글 입력 효과 Extension</p>
+            <p><img src="https://img.shields.io/github/stars/KimYC1223/KoreanTyper" alt=""> <img
+                    src="https://img.shields.io/github/forks/KimYC1223/KoreanTyper" alt=""> <img
+                    src="https://img.shields.io/github/issues/KimYC1223/KoreanTyper" alt=""></p>
+            <hr>
+            <h2>1. 소개</h2>
+            <p><img src="https://github.com/KimYC1223/KoreanTyper/blob/main/DocImage/KoreanTyperGif.gif?raw=true"
+                    alt="Demo GIF"></p>
+            <p>한글은 알파벳이나 한자와는 다르게 초성, 중성, 종성으로 이루어진 음절 단위를 사용합니다.</p>
+            <p>또한, string class의 가장 작은 기본 단위는 음절이기 때문에,</p>
+            <p>string의 각 원소를 하나씩 출력하게 된다면 한 음절씩 나타나는 모습을 볼 수 있습니다.</p>
+            <p>이 패키지는 그러한 문제를 해결하기 위해</p>
+            <p>주어진 string 입력을 <strong>마치 실제 키보드로 입력하는 것 처럼 보이는 효과를 주는</strong> string class Extension입니다.</p>
+            <p>이 에셋을 사용하여 Unity 엔진에서 사람이 문자열을 직접 타이핑 하는 듯 한 느낌을</p>
+            <p>스크립트로 쉽게 구현 할 수 있습니다.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:center">플랫폼</th>
+                        <th style="text-align:center">버전</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">Unity</td>
+                        <td style="text-align:center"><img src="https://img.shields.io/badge/Version-2017.1.0f3 ↑-orange"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><br></p>
+            <p><a href="https://github.com/KimYC1223/KoreanTyper/blob/main/LICENSE"><img
+                        src="https://img.shields.io/github/license/KimYC1223/KoreanTyper"></a> <a
+                    href="mailto:kau_esc@naver.com"><img
+                        src="https://img.shields.io/badge/Contact-kau_esc@naver.com-blue?logo=gmail&amp;logoColor=white"></a>
+                <a href="https://KimYC1223.github.io/"><img
+                        src="https://img.shields.io/badge/blog-GitBlog-red?logo=github&amp;logoColor=white"></a></p>
+            <p><br></p>
+            <hr>
+            <p><br></p>
+            <h2>2. 사용법</h2>
+            <p><strong>KoreanTyper</strong>는 아주 간단하게 사용 할 수 있습니다.</p>
+            <p>먼저, <code>KoreanTyper</code> 네임 스페이스를 사용한다는 코드를 스크립트의 상단에 배치합니다.</p>
+            <pre><code class="language-CS">using KoreanTyper;</code></pre>
+            <p>원하는 <code>string</code>에 <code>Typing()</code> 함수를 사용합니다.</p>
+            <pre><code>Debug.Log("안녕하세요".Typing(7));       // 출력 결과 : 안녕ㅎ</code></pre>
+            <p><strong>이게 끝 입니다.</strong> 참 쉽죠?</p>
+            <p><br></p>
+            <hr>
+            <p><br></p>
+            <h2>3. 더 자세한 사용법</h2>
+            <p><strong>KoreanTyper</strong>는 다음 3가지의 <code>string Class Extension</code>을 제공합니다:</p>
+            <ul>
+                <li><code>public int GetTypingLength()</code></li>
+                <li><code>public string Typing(int count)</code></li>
+                <li><code>public string Typing(float percent)</code></li>
+            </ul>
+            <p><br></p>
+            <h3>3.1 <code>public int GetTypingLength()</code></h3>
+            <p>해당 문장이 총 몇번의 타이핑으로 입력 할 수 있는지 반환하는 함수입니다.</p>
+            <p>예를 들어, <code>"동해물과 백두산이 마르고 닳도록"</code>이라는 스트링은</p>
+            <p>총 <code>22</code>회의 키보드 누름으로 입력할 수 있습니다.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:center">동</th>
+                        <th style="text-align:center">해</th>
+                        <th style="text-align:center">물</th>
+                        <th style="text-align:center">과</th>
+                        <th style="text-align:center">(띄움)</th>
+                        <th style="text-align:center">백</th>
+                        <th style="text-align:center">두</th>
+                        <th style="text-align:center">산</th>
+                        <th style="text-align:center">이</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">ㄷㅗㅇ</td>
+                        <td style="text-align:center">ㅎㅐ</td>
+                        <td style="text-align:center">ㅁㅜㄹ</td>
+                        <td style="text-align:center">ㄱㅗㅏ</td>
+                        <td style="text-align:center">-</td>
+                        <td style="text-align:center">ㅂㅐㄱ</td>
+                        <td style="text-align:center">ㄷㅜ</td>
+                        <td style="text-align:center">ㅅㅏㄴ</td>
+                        <td style="text-align:center">ㅇㅣ</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><code>public int GetTypingLength()</code>는 이 횟수를 리턴하는 함수입니다.</p>
+            <p>영어, 숫자, 특수 문자, 한글 자음, 쌍자음과 모음은 1회 입력으로 간주하고</p>
+            <p><code>ㄳ</code>, <code>ㄶ</code> 와 같이 두 자음이 합쳐져 있거나</p>
+            <p><code>ㅙ</code>, <code>ㅞ</code>, <code>ㅚ</code> 와 같이 두 모음이 합쳐져 있는 경우는 2회 입력으로 간주합니다.</p>
+            <pre><code class="language-CS">Debug.Log("동해물과 백두산이".GetTypingLength());       // 출력 결과 : 22</code></pre>
+            <p><br></p>
+            <h3>3.2 <code>public string Typing(int count)</code></h3>
+            <p><code>count</code>횟수 만큼 키보드를 눌렀을 때, 해당 문자가 어디까지 입력되는지 계산하고 이를 반환하는 함수입니다.</p>
+            <p><code>count</code>가 <code>0</code>이하면 <code>""</code>을 리턴하고,</p>
+            <p><code>count</code>가 해당 문자열의 <code>GetTypingLength()</code>이상이면 해당 문자열을 그대로 리턴합니다.</p>
+            <p><code>"안녕하세요"</code> 라는 문자열을 예로 들면, 다음과 같습니다.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:right"></th>
+                        <th style="text-align:center">안</th>
+                        <th style="text-align:center">녕</th>
+                        <th style="text-align:center">하</th>
+                        <th style="text-align:center">세</th>
+                        <th style="text-align:center">요</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:right">조합</td>
+                        <td style="text-align:center">ㅇㅏㄴ</td>
+                        <td style="text-align:center">ㄴㅕㅇ</td>
+                        <td style="text-align:center">ㅎㅏ</td>
+                        <td style="text-align:center">ㅅㅔ</td>
+                        <td style="text-align:center">ㅇㅛ</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">필요 타이핑 수</td>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:center">2</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">누적 필요 타이핑 수</td>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">6</td>
+                        <td style="text-align:center">8</td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">12</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:center"><code>count</code> 값</th>
+                        <th style="text-align:left"><code >"안녕하세요".Typing(count)</code> 계산 결과</th>
+                        <th style="text-align:left">출력 결과</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">0</td>
+                        <td style="text-align:left"></td>
+                        <td style="text-align:left"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:left">ㅇ</td>
+                        <td style="text-align:left">ㅇ</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:left">ㅇㅏ</td>
+                        <td style="text-align:left">아</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:left">ㅇㅏㄴ</td>
+                        <td style="text-align:left">안</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:left">ㅇㅏㄴㄴ</td>
+                        <td style="text-align:left">안ㄴ</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">5</td>
+                        <td style="text-align:left">ㅇㅏㄴㄴㅕ</td>
+                        <td style="text-align:left">안녀</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">6</td>
+                        <td style="text-align:left">ㅇㅏㄴㄴㅕㅇ</td>
+                        <td style="text-align:left">안녕</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">7</td>
+                        <td style="text-align:left">ㅇㅏㄴㄴㅕㅇㅎ</td>
+                        <td style="text-align:left">안녕ㅎ</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">8</td>
+                        <td style="text-align:left">ㅇㅏㄴㄴㅕㅇㅎㅏ</td>
+                        <td style="text-align:left">안녕하</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">9</td>
+                        <td style="text-align:left">ㅇㅏㄴㄴㅕㅇㅎㅏㅅ</td>
+                        <td style="text-align:left">안녕하ㅅ</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:left">ㅇㅏㄴㄴㅕㅇㅎㅏㅅㅔ</td>
+                        <td style="text-align:left">안녕하세</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">11</td>
+                        <td style="text-align:left">ㅇㅏㄴㄴㅕㅇㅎㅏㅅㅔㅇ</td>
+                        <td style="text-align:left">안녕하세ㅇ</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">12</td>
+                        <td style="text-align:left">ㅇㅏㄴㄴㅕㅇㅎㅏㅅㅔㅇㅛ</td>
+                        <td style="text-align:left">안녕하세요</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>위 함수를 <code>Update</code>함수나 <code>Coroutine</code>안에 집어 넣어,</p>
+            <p>일정 시간마다 한 음절씩 입력되도록 구현하면 됩니다.</p>
+            <pre><code class="language-CS">Debug.Log("안녕하세요".Typing(9));       // 출력 결과 : 안녕하ㅅ</code></pre>
+            <p><br></p>
+            <h3>3.3 <code>public string Typing(float percent)</code></h3>
+            <p>몇 번에 걸쳐 진행 될 지 모르겠다면, 그냥 0~1 사이의 진행률로 입력해도 됩니다.</p>
+            <p><code>percent</code>가 <code>0</code>이하면 <code>""</code>을 리턴하고,</p>
+            <p><code>percent</code>가 <code>1</code>이상이면 해당 문자열을 그대로 리턴합니다.</p>
+            <p><code>percent</code>가 <code>0</code>보다 크고, <code>1</code>보다 작다면 진행률에 맞는 문자열을 리턴합니다.</p>
+            <pre><code class="language-CS">Debug.Log("안녕하세요".Typing(0.845f));      // 출력 결과 : 안녕하세</code></pre>
+            <p><br></p>
+            <hr>
+            <p><br></p>
+            <h2>4. 간단한 데모</h2>
+            <p>본 코드는 <code>Text</code> UI에 문자열을 타이핑하는 효과를 주는 아주 간단한 예제입니다.</p>
+            <pre><code class="language-CS">    using KoreanTyper;          // Korean Typer 네임 스페이스 추가
+    using UnityEngine;
+    using UnityEngine.UI;
+    
+    //======================================================================================
+    //  Simple  Demo
+    //  간단한 데모
+    //======================================================================================
+    public class KoreanTyperDemo : MonoBehaviour {
+        public Text TestText;
+    
+        //==================================================================================
+        // Initializing | 초기화
+        //==================================================================================
+        private void Start() {
+            StartCoroutine(TypingCoroutine("동해물과 백두산이 마르고 닳도록"));
+        }
+    
+        //==================================================================================
+        // TypingCoroutine | 데모 코루틴
+        //==================================================================================
+        public IEnumerator TypingCoroutine(string str) {
+            TestText.text = "";                                   // 초기화
+            yield return new WaitForSeconds(1f);                  // 1초 대기
+            
+            int strTypingLength = str.GetTypingLength();          // 최대 타이핑 수 구함
+            for(int  i = 0 ; i &lt;= strTypingLength ; i ++ ) {      // 반복문
+                TestText.text = str.Typing(i);                    // 타이핑
+                yield return new WaitForSeconds(0.03f);           // 0.03초 대기
+            }
+        }
+    }</code></pre>
+            <p><br></p>
+            <hr>
+            <p><br></p>
+            <h2>5. NOTICE</h2>
+            <p>이때, for문과 함께 <strong>Korean Typer</strong> 패키지를 사용할 땐</p>
+            <p>반드시 <code>str.GetTypingLength()</code>보다 <strong>같거나 작을 때</strong>까지 반복하도록 해야합니다.</p>
+            <p>만약 4번 데모에서 <code>i &lt;= strTypingLength</code> 가 아닌</p>
+            <p><code>i &lt; strTypingLength</code>으로 했다면, 마지막 한 글자가 제대로 나오지 않을겁니다.</p>
+            <p><br>
+            </p>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
