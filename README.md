@@ -1,3 +1,5 @@
+<a href="https://assetstore.unity.com/packages/tools/localization/koreantyper-232949"><img src="https://github.com/KimYC1223/KoreanTyper/blob/master/ReadmeImage/assetstore.png?raw=true" alt="Asset Store Guide" width="100%"></a>
+
 ![logo Image](https://github.com/KimYC1223/KoreanTyper/blob/main/DocImage/Title.png?raw=true)
 
 # Korean Typer
@@ -69,9 +71,15 @@ Debug.Log("안녕하세요".Typing(7));		// 출력 결과 : 안녕ㅎ
 
 **KoreanTyper**는 다음 3가지의 ```string Class Extension```을 제공합니다: 
 
-- ```public int GetTypingLength()```
-- ```public string Typing(int count)```
-- ```public string Typing(float percent)```
+- Korean Typer
+  - 1. 소개
+  - 2. 사용법
+  - 3. 더 자세한 사용법
+    - 3.1 ```public int GetTypingLength()```
+    - 3.2 ```public string Typing(int count)```
+    - 3.3 ```public string Typing(float percent)```
+  - 4. 간단한 데모
+  - 5.  NOTICE
 
 <br>
 
