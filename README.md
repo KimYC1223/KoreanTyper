@@ -1,4 +1,4 @@
-<a href="https://assetstore.unity.com/packages/tools/localization/koreantyper-232949"><img src="https://github.com/KimYC1223/KoreanTyper/blob/master/DocImage/assetstore.png?raw=true" alt="Asset Store Guide" width="100%"></a>
+<a href="https://assetstore.unity.com/packages/tools/localization/koreantyper-232949"><img src="https://github.com/KimYC1223/KoreanTyper/blob/main/DocImage/assetstore.png?raw=true" alt="Asset Store Guide" width="100%"></a>
 
 ![logo Image](https://github.com/KimYC1223/KoreanTyper/blob/main/DocImage/Title.png?raw=true)
 
